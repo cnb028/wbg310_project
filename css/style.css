@@ -1,0 +1,307 @@
+﻿/*Browser Style Reset*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summarytime, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #91AEC4;
+}
+
+/*header*/
+
+header {
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative ;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 30%;
+}
+
+    header .overlay {
+        width: 100%;
+        height: 20%;
+        text-shadow: 1px 1px 1px #333;
+        background-color: #CADEED;
+        border-radius: 0 0 85% 85% / 30%;
+    }
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    margin-bottom: 30px;
+    color:#194569;
+}
+
+header h3, p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    color: #194569;
+}
+
+/*Menu*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #91AEC4;
+    overflow: hidden;
+    z-index: 4;
+}
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: #194569;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #DBECF4;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #5F84A2;
+            color: black;
+        }
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    z-index: 999999;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B7D0E1;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #DBECF4;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*Main*/
+
+.main {
+    background-color: #5f84A2;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 25%;
+    background-color: #5f84A2;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    margin: 10px,25px,10px, 25px;
+    width: 75%;
+    background-color: #5f84A2;
+}
+
+/* Add a card effect for articles */
+.card {
+    padding: 5px 10px 2px 5px;
+    margin-top: 20px;
+    margin-right: 100px;
+    background-color: #B7D0E1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*Footer*/
+
+.footer-basic {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    background-color: #CADEED;
+    border-radius: 85% 85% 0 0 /30%;
+}
+
+.footer-basic .copyright {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 50px 0px 25px 0px;
+        font-family: 'Dancing Script', cursive;
+        color: #194569;
+}
+
+#devices {
+    background-color: #B7D0E1;
+    border: 1px solid #4c343c;
+    padding: 10px;
+    margin: 20px 1050px 10px 20px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    border-radius: 7px;
+    display: none;
+    transition: width 5s, height 5s;
+    transition-timing-function: ease-in-out;
+    width: 25%;
+}
+
+#oper {
+    background-color: #B7D0E1;
+    border: 1px solid #4c343c;
+    padding: 10px;
+    margin: 20px 1050px 10px 20px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    border-radius: 7px;
+    display: none;
+    transition: width 5s, height 5s;
+    transition-timing-function: ease-out;
+    width: 25%;
+}
+
+#intellegence {
+    background-color: #B7D0E1;
+    border: 1px solid #4c343c;
+    padding: 10px;
+    margin: 20px 1050px 10px 20px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    border-radius: 7px;
+    display: none;
+    transition: width 5s, height 5s;
+    transition-timing-function: ease-in;
+    width: 25%;
+}
+#form1 {
+    padding: 10px;
+    width: 500px;
+    border-style: solid;
+    border-color: #908488;
+    border-radius: 15px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    margin: 20px;
+    color: #194569;
+    background-color: #5F84A2;
+}
+
+#form2 {
+    padding: 10px;
+    width: 500px;
+    border-style: solid;
+    border-color: #4F4D8C;
+    border-radius: 15px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    margin: 20px;
+    color: #194569;
+    background-color: #5F84A2;
+    display: none;
+    transition: width 5s, height 5s;
+    transition-timing-function: ease-in-out;
+}
+
+#form3 {
+    padding: 10px;
+    width: 500px;
+    border-style: solid;
+    border-color: #3F3C8B;
+    border-radius: 15px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    margin: 20px;
+    color: #194569;
+    background-color: #5F84A2;
+    display: none;
+    transition: width 5s, height 5s;
+    transition-timing-function: ease-in;
+}
+span .hover-img {
+    position: absolute;
+}
+
+    span .hover-img span {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        z-index: 9999;
+    }
+
+span:hover .hover-img span {
+    top: 10px;
+    left: 100px;
+
+}
+table, th, tr {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+th {
+
+    border-right: 5px solid #5F84A2;
+}

@@ -1,0 +1,280 @@
+﻿<!<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Epotfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("feeds", "1");
+    </script>
+    <script type="text/javascript">
+        google.setOnLoadCallback(initialize);
+    </script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script>
+
+  
+
+        function validateform1() {
+            var name = document.getElementById("name").value
+
+
+            if (name == "" || name == null) {
+                $("#devices").slideDown();
+                techMsg("As funny as it is, you can't be nameless.");
+            } else if (!getTech()) {
+                $("#devices").slideDown();
+                techMsg("Device Required. Confirm Device.");
+            }
+            else {
+                $("#devices").slideDown();
+                techMsg("Designation confirmed. " + name + " prefers " + getTech() + "s.");
+                $("#form2").slideDown()
+            }
+        }
+
+
+        function validateform2() {
+            var name = document.getElementById("name").value
+            var time = document.getElementById("time").value
+
+            if (!getOS()) {
+                 
+                $("#oper").slideDown();
+                osMsg("Chooose Operating System.");
+
+            }
+            else if (time == "" || time == null || isNaN(time)) {
+
+                $("#oper").slideDown();
+                osMsg("Years of Use Required");
+            }
+            else {
+                $("#oper").slideDown();
+                osMsg(name + " prefers  " + getOS() + " " + getTech() + ", which they have used for " + time + " years.");
+                $("#form3").slideDown()
+            }
+        } 
+
+        function validateform3() {
+            var name = document.getElementById("name").value
+
+            if (!getAI()) {
+                $("#intellegence").slideDown();
+                aiMsg("Select Virtual Assistant.");
+
+            } else {
+                $("#intellegence").slideDown();
+                aiMsg(name + " prefers " + getAI() + " as their Virtual Assistant.");
+            }
+        }
+
+        function getTech() {
+
+            var isChecked = false; //assume no button has been clicked
+            var theSelection;
+            var tech = document.getElementsByName("techset");
+
+            for (var i = 0; i < tech.length; i++) {
+                if (tech[i].checked) { //checks for attribute being true
+                    isChecked = true;
+                    theSelection = tech[i].value;
+                    break; //leave the loop since only one can be checked
+                }//end if
+            }//end for
+            if (isChecked) {
+
+                return theSelection;
+            } else {
+                return false;
+            }//end else
+
+        }//end function getTech()
+
+        function techMsg(s) {
+            var devicesBox = document.getElementById("devices");
+            //reset to blank by overwriting
+            devicesBox.innerHTML = s;
+        }// end function
+
+        function getOS() {
+            var isSelect = false; //assume no button has been clicked
+            var choosen;
+            var os = document.getElementsByName("opersys");
+
+            for (var i = 0; i < os.length; i++) {
+                if (os[i].checked) { //checks for attribute being true
+                    isSelect = true;
+                    choosen = os[i].value;
+                    break; //leave the loop since only one can be checked
+                }//end if
+            }//end for
+            if (isSelect) {
+                return choosen;
+            } else {
+                return false;
+            }//end else
+        }
+
+        function osMsg(s) {
+            var osBox = document.getElementById("oper");
+            //reset to blank by overwriting
+            osBox.innerHTML = s;
+        }
+
+        function getAI() {
+            var isPicked = false; //assume no button has been clicked
+            var pick;
+            var ai = document.getElementsByName("artint");
+
+            for (var i = 0; i < ai.length; i++) {
+                if (ai[i].checked) { //checks for attribute being true
+                    isPicked = true;
+                    pick = ai[i].value;
+                    break; //leave the loop since only one can be checked
+                }//end if
+            }//end for
+            if (isPicked) {
+                return pick;
+            } else {
+                return false;
+            }//end else
+        }
+
+        function aiMsg(s) {
+            var aiBox = document.getElementById("intellegence");
+            //reset to blank by overwriting
+            aiBox.innerHTML = s;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="overlay">
+            <h1>Christine Bettencourt's Final Project</h1>
+            <h3>Owner of Bouncing Bunny Studios </h3>
+            <br />
+        </div>
+    </header>
+
+    <!--Menu-->
+
+    <div class="topnav">
+        <a href="homepage.html">Home</a>
+        <div class="dropdown">
+            <a href="#dropdown-content">Projects</a>
+            <div class="dropdown-content">
+                <a href="about/projects.html">Current</a>
+                <a href="about/future.html">Future</a>
+            </div>
+        </div>
+        <a class="active" href="question.html">Technology Questionnaire</a>
+    </div>
+
+    <!--Main-->
+    <div class="main">
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <div class="card">
+                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="christine-bettencourt-76a49499" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/christine-bettencourt-76a49499?trk=profile-badge"></a></div>
+
+                    </div>
+
+                    <div class="card">
+                        <a class="twitter-timeline" href="https://twitter.com/cnb5995?ref_src=twsrc%5Etfw">Tweets by cnb5995</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+
+                    <div class="card">
+                        <a class="github" href="https://github.com/cnb028"><img src="images/github.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <form name="form1" id="form1" action="" method="post">
+                        <h4>
+                            Designation:
+                            <input type="text" id="name" name="name">
+                        </h4>
+                        <br> <!--new line here-->
+                        <br />
+
+                        <label> Select Device:<br /></label>
+                        <input type="radio" name="techset" value="computer">Computer<br>
+                        <input type="radio" name="techset" value="tablet">Tablet<br>
+                        <input type="radio" name="techset" value="cellphone">Cellphone<br> <br />
+
+                        <input type="button" value="Submit" onclick="validateform1()" /> &nbsp; &nbsp; <input type="reset" id="reset3" value="Clear Form" />
+                    </form> <!--end form1-->
+                </div>
+
+                <div class="card">
+                    <form name="form2" id="form2" action="" method="post">
+                        <h4>Operating System: <br /></h4>
+
+                        <span><div class="hover-img"><input type="radio" name="opersys" id="Windows" value="Windows" />Windows<span><img src="images/win.png" height="50" width="50" /></span></div></span><br />
+                        <span><div class="hover-img"><input type="radio" name="opersys" id="Mac" value="Mac" />Mac<span><img src="images/mac.png" height="50" width="50" /></span></div></span><br />
+                        <span><div class="hover-img"><input type="radio" name="opersys" id="iOS" value="iOS" />Iphone<span><img src="images/apple.png" height="50" width="50" /></span></div></span><br />
+                        <span><div class="hover-img"><input type="radio" name="opersys" id="Chromebook" value="Chromebook" />Chromebook<span><img src="images/chrome.jfif" height="50" width="50" /></span></div></span><br />
+                        <span><div class="hover-img"><input type="radio" name="opersys" id="Android" value="Android">Android<br /><span><img src="images/android.png" height="50" width="50"></span></div></span><br />
+
+                        <h4>
+                            Length of Use in Years:
+                            <input type="text" id="time" name="time" />
+                        </h4>
+                        <br />
+                        <br />
+
+                        <input type="button" value="Submit" onclick="validateform2()" /> &nbsp; &nbsp; <input type="reset" id="reset3" value="Clear Form" />
+
+                    </form><!--end form2-->
+                </div>
+                <div class="card">
+                    <form name="form3" id="form3" action="" method="post">
+                        <h4>Virtual Assistant <br /></h4>
+
+                        <input type="radio" name="artint" value="Cortona" />Cortona<br />
+                        <input type="radio" name="artint" value="Siri" />Siri<br />
+                        <input type="radio" name="artint" value="Google" />Google<br />
+                        <input type="radio" name="artint" value="Alexa" />Alexa<br />
+                        <input type="radio" name="artint" value="Bigxby" />Bigxby<br />
+                        <br />
+
+                        <input type="button" value="Submit" onclick="validateform3()" /> &nbsp; &nbsp; <input type="reset" id="reset3" value="Clear Form" />
+
+                    </form>
+                </div>
+
+                <div id="devices"></div>
+                <div id="oper"></div>
+                <div id="intellegence"></div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer-basic">
+        <footer>
+            <p class="copyright">Copyright Bettencourt 2022</p>
+            <a href="copyright.html">Copyright Claims and Policies</a>
+            <br />
+        </footer>
+    </div>
+
+</body>
+</html>

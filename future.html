@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta charset="utf-8" />
+        <title>Resume</title>
+        <link rel="stylesheet" href="css/site.css" />
+        <link rel="stylesheet" href="css/sidr.dark.min.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <a id="simple-menu" class="menu-button" href="#sidr">Toggle menu</a>
+
+    <div id="sidr">
+        <ul>
+            <li><a href="index.html"></a></li>
+            <li>
+                <h2><a href="homepage.html">Home</a></h2>
+                <h2>About Me</h2>
+                <ul>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="question.html">Tech Preferences Questionnaire</a></li>
+        </ul>
+        <form>
+            <input type="text" placeholder="Search..." />
+        </form>
+        <h2>Contact:</h2>
+        <p><a href="tel:+1785-734-8412">Phone</a></p>
+        <p><a href="mailto:cnb028@outlook.com">Email</a></p>
+        <a class="twitter-timeline" href="https://twitter.com/cnb5995?ref_src=twsrc%5Etfw">Twitter</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div class="content">
+        <div class="main">
+        </div>
+    </div>
+
+    <script src="sidr-master/dist/sidr.js"></script>
+    <script>
+        (function (sidr) {
+            "use strict"
+
+            sidr.new('#simple-menu', {
+                timing: 'ease-in-out',
+                speed: 500
+            });
+
+            window.onresize = function () {
+                sidr.close('sidr');
+            };
+
+        })(window.sidr);
+    </script>
+
+</body>
+
+</html>
