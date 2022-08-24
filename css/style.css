@@ -42,14 +42,14 @@ header {
     }
 
 header h1 {
-    font-family: 'Dancing Script', cursive;
+    font-family: Arial;
     font-size: 80px;
     margin-bottom: 30px;
     color:#194569;
 }
 
 header h3, p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
     margin-bottom: 30px;
     color: #194569;
 }
@@ -182,7 +182,7 @@ header h3, p {
         font-size: 20px;
         margin-bottom: 10px;
         padding: 50px 0px 25px 0px;
-        font-family: 'Dancing Script', cursive;
+        font-family: Arial, cursive;
         color: #194569;
 }
 
